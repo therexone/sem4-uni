@@ -50,7 +50,8 @@ while choice != 5:
         print('Sorted List: ', sorted_list)
 
 
- """ -----------OUTPUT----------
+""" 
+ -----------OUTPUT----------
  therexone@therexone-X556UQK:~/Desktop/workspace/sem4-uni/OSTL$ python3 exp4-tuples.py 
 --------TUPLE DEMO--------
 1. Enter Student details
