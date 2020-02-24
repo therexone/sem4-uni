@@ -12,7 +12,7 @@ print(f'Content in file:\n {file.read()}')
 
 
 # appending data to the file
-print('Appeding data to the file....')
+print('Appending data to the file....')
 for i in range(5):
     file.write(f'This is line {i+2}\n')
 file.seek(0)

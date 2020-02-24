@@ -42,23 +42,24 @@ void main()
 }
 
 // --------OUTPUT-------
-// therexone@therexone-X556UQK:~/Desktop/workspace/sem4-uni/OSL$ ./"exp5-sjf" 
+/*
+therexone@therexone-X556UQK:~/Desktop/workspace/sem4-uni/OSL$ ./exp5-fcfs
 
-// Enter the number of Processes: 5
+Enter the number of Processes: 5
 
-// Enter Burst times for the processes-
-// Process[1]: 4
-// Process[2]: 5
-// Process[3]: 6
-// Process[4]: 3
-// Process[5]: 5
+Enter Burst times for the processes-
+Process[1]: 4
+Process[2]: 5
+Process[3]: 6
+Process[4]: 3
+Process[5]: 5
+Process Number   Burst Time      Waiting Time    Turn Around Time
 
-// Process Number   Burst Time      Waiting Time    Turn Around Time
-
-// 0               3               0               3
-// 1               4               3               7
-// 2               5               7               12
-// 3               5               12              17
-// 4               6               17              23
-// Averge Waiting time: 7
-// Average Turn Around Time: 12
+0               4               0               4
+1               5               4               9
+2               6               9               15
+3               3               15              18
+4               5               18              23
+Averge Waiting time: 9
+Average Turn Around Time: 13
+*/
