@@ -4,7 +4,6 @@ from collections import deque
 
 # stack - LIFO
 
-
 class stack:
     def __init__(self, size):
         self.size = size
@@ -88,7 +87,6 @@ while True:
             print('\n--------LINKED LIST------\n1.Add element(end)\n2.Add Element(front)\n3.Delete(end)\n4.Delete(front)\n5.Insert at an index\n6.Delete at an index\n7.Display List')
             sub_choice = int(
                 input('Enter a choice(1-6) or press any other number to exit: '))
-            
             if sub_choice == 1:
                 linked_list.append(input('Enter Element to add: '))
             elif sub_choice == 2:
