@@ -1,49 +1,8 @@
-# program to implement stack, queue and linked list in python
+# program to implement stack, queue and linked list in python using packages
 
-from collections import deque
-
-# stack - LIFO
-
-class stack:
-    def __init__(self, size):
-        self.size = size
-        self.list = []
-
-    def push(self, element):
-        if (len(self.list) != self.size):
-            self.list.append(element)
-        else:
-            print('Stack Overflow.')
-
-    def pop(self):
-        try:
-            return self.list.pop()
-        except IndexError:
-            print('\nStack is empty, try pushing some elements to the stack.')
-
-    def get_stack(self):
-        return self.list
-
-
-# #queue - FIFO
-class queue:
-    def __init__(self, size):
-        self.size = size
-        self.queue = deque([], size)
-
-    def push_to_queue(self, element):
-        self.queue.append(element) if (len(self.queue) !=
-                                       self.size) else print('Queue Overflow.')
-
-    def dequeue(self):
-        try:
-            return self.queue.popleft()
-        except IndexError:
-            print('Queue is empty, try pushing some elements to the queue.')
-
-    def get_queue(self):
-        return self.queue
-
+from queue import queue
+from stack import stack
+from lists import lists as linked_list
 
 while True:
     print('-------BASIC DATA STRUCTURE IMPLEMENTAION IN PYTHON-------\n1.Stack\n2.Queue\n3.Linked List')
@@ -82,28 +41,27 @@ while True:
             else:
                 break
     elif choice == 3:
-        linked_list = []
+        linked_list = linked_list()
         while True:
             print('\n--------LINKED LIST------\n1.Add element(end)\n2.Add Element(front)\n3.Delete(end)\n4.Delete(front)\n5.Insert at an index\n6.Delete at an index\n7.Display List')
             sub_choice = int(
                 input('Enter a choice(1-6) or press any other number to exit: '))
             if sub_choice == 1:
-                linked_list.append(input('Enter Element to add: '))
+                linked_list.add_to_end((input('Enter Element to add: ')))
             elif sub_choice == 2:
-                linked_list.insert(0, input('Enter element to add at front: '))
+                linked_list.add_to_start(input('Enter element to add at front: '))
             elif sub_choice == 3:
-                print(f'Deleted from end: {linked_list.pop()}') if len(
-                    linked_list) != 0 else print('No Element in stack try adding some\n')
+                linked_list.delete_at_end()
             elif sub_choice == 4:
-                print(f'Deleted from start: {linked_list.pop(0)}') if len(
-                    linked_list) != 0 else print('No Element in stack try adding some\n')
+                linked_list.delete_at_start()
             elif sub_choice == 5:
-                linked_list.insert(int(input('Enter Index: ')),
-                                   input('Enter element: '))
+                index = int(input('Enter index: '))
+                element = input('Enter element: ')
+                linked_list.insert_at_index(index, element)
             elif sub_choice == 6:
-                print(f'Deleted from index: {linked_list.pop(int(input("Enter Index: ")))}') if len(
-                    linked_list) != 0 else print('No Element in stack try adding some\n')
+                index = int(input('Enter index: '))
+                linked_list.delete_at_index(index)
             elif sub_choice == 7:
-                print(linked_list)
+               linked_list.display_list()
             else:
                 break
